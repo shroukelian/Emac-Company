@@ -23,7 +23,7 @@
 
 <body>
 
-    <header style="background-color: #004A99;">
+        <header style="background-color: #004A99;">
         <div class="container">
             <div class="logo">
                 <a href="#hero" class="logo-link">
@@ -46,9 +46,9 @@
                         <li><a href="index.html">الرئيسية</a></li>
                         <li><a href="index.html#about">من نحن</a></li>
                         <li><a href="index.html#features">لماذا EMAC؟</a></li>
-                        <li><a href="index.htmlservices.html">خدماتنا (الصيانة)</a></li>
-                        <li><a href="index.html#store">المتجر (الإلكتروني)</a></li>
-                        <li><a href="automation.html">الأتمتة</a></li>
+                        <li><a href="services.html">خدماتنا (الصيانة)</a></li>
+                        <li><a href="store.html">المتجر (الإلكتروني)</a></li>
+                        <li><a href="automation.html">نظام n8n للإدارة</a></li>
                         <li><a href="index.html#contact">اتصل بنا</a></li>
                     </ul>
                 </nav>
@@ -87,19 +87,19 @@
                             <li><i class="fas fa-check-circle"></i> تركيب وصيانة وحدات التكييف المركزي</li>
                             <li><i class="fas fa-check-circle"></i> صناعة مجاري الهواء "الدكت"</li>
                             <li><i class="fas fa-check-circle"></i> صيانة العوازل وحلول التبريد</li>
-                            <li><i class="fas fa-check-circle"></i> تركيب غرف التبريد والتجميد</li>
+                            <li><i class="fas fa-check-circle"></i> <strong style="color: var(--primary-color);">تمديد مواسير النحاس للتكييف</strong></li>
                         </ul>
                     </div>
 
                     <!-- خدمات صيانة التبريد والمستودعات -->
                     <div class="service-detail-card animate-on-scroll">
                         <i class="fas fa-warehouse icon"></i>
-                        <h3>خدمات الصيانة الدورية والتبريد</h3>
+                        <h3>غرف التبريد والتجميد والصيانة الدورية</h3>
                         <ul>
+                            <li><i class="fas fa-check-circle"></i> تركيب غرف التبريد والتجميد</li>
+                            <li><i class="fas fa-check-circle"></i> خدمات صيانة نظم التبريد للغرف المبردة</li>
                             <li><i class="fas fa-check-circle"></i> صيانة دورية لأنظمة التكييف المركزي</li>
                             <li><i class="fas fa-check-circle"></i> خدمات نظام لوحة المراقبة عن بعد</li>
-                            <li><i class="fas fa-check-circle"></i> خدمات تبريد المستودعات المبردة</li>
-                            <li><i class="fas fa-check-circle"></i> خدمات صيانة نظم التبريد للغرف المبردة</li>
                         </ul>
                     </div>
                     
@@ -146,6 +146,7 @@
                                 <option value="">--- اختر نوع الخدمة بالتحديد ---</option>
                                 <optgroup label="التكييف المركزي">
                                     <option value="central_install">تركيب تكييف مركزي</option>
+                                    <option value="pipe_extension">تمديد مواسير النحاس</option>
                                     <option value="central_maint">صيانة دورية للتكييف المركزي</option>
                                     <option value="duct_work">صناعة مجاري الهواء "الدكت"</option>
                                 </optgroup>
@@ -156,6 +157,7 @@
                                     <option value="oven_repair">صيانة أفران وميكروويف</option>
                                 </optgroup>
                                 <optgroup label="خدمات أخرى">
+                                    <option value="fridge_room_install">تركيب غرف تبريد/تجميد</option>
                                     <option value="car_ac">صيانة تكييف السيارات المبردة</option>
                                     <option value="consult">استشارات فنية</option>
                                 </optgroup>
@@ -223,7 +225,7 @@
                         <li><a href="index.html#about">من نحن</a></li>
                         <li><a href="#services-detail">حجز صيانة</a></li>
                         <li><a href="store.html">المتجر الإلكتروني</a></li>
-                        <li><a href="automation.html">الأتمتة</a></li>
+                        <li><a href="automation.html">نظام n8n للإدارة</a></li>
                     </ul>
                 </div>
                 <div class="footer-col" id="contact-footer">
@@ -234,8 +236,9 @@
             </div>
             <div class="copyright">
                 <p>&copy; <span id="current-year"></span> مؤسسة الإخلاص الحديثة EMAC. جميع الحقوق محفوظة.</p>
-                <p class="footer-note">Design and automation by **GMTWEB**</p>
-            </div>
+  <p class="footer-note">Design and programming by<a
+                        href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                        target="_blank"><strong>GMTWEB</strong> </a> </p>            </div>
         </div>
     </footer>
     <script src="main.js"></script>
