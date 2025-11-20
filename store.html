@@ -1,0 +1,218 @@
+//store.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر EMAC | معرض الأجهزة الكهربائية، التكييف، والتبريد</title>
+    <meta name="description" content="متجر EMAC الإلكتروني يوفر جميع أنواع الأجهزة الكهربائية: مكيفات، ثلاجات، غسالات، شاشات عرض، أجهزة مطابخ، وغيرها. جودة عالية وأسعار تنافسية.">
+    <meta name="keywords" content="معرض أجهزة كهربائية, بيع مكيفات, متجر ثلاجات, أسعار أجهزة كهربائية, EMAC منتجات, سخانات, أفران, غسالات">
+    
+    <link rel="stylesheet" href="emac_style.css">
+    
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+   <header style="background-color: #004A99;">
+        <div class="container">
+            <div class="logo">
+                <a href="#hero" class="logo-link">
+                    <div class="logo-content">
+                        <img src="images/emac_logo.png" alt="شعار EMAC - الإخلاص الحديثة" class="header-logo-img">
+                        <span style="color: #f0f0f0;">مؤسسة الإخلاص الحديثة</span>
+                    </div>
+                </a>
+            </div>
+
+            <button class="hamburger-menu" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="main-nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#features">لماذا EMAC؟</a></li>
+                        <li><a href="index.htmlservices.html">خدماتنا (الصيانة)</a></li>
+                        <li><a href="index.html#store">المتجر (الإلكتروني)</a></li>
+                        <li><a href="index.html#automation">الأتمتة</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+                <div class="contact-header">
+                    <a href="tel:+201149364431" class="phone-number">01149364431</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO Section for Store Page -->
+        <section id="store-content" class="page-section blue-bg hero-sub-page">
+            <div class="container">
+                <h1 style="color: var(--secondary-color);">معرض EMAC الإلكتروني: أجهزة ومنتجات</h1>
+                <p style="color: white; font-size: 1.2em;">تصفح مجموعة واسعة من الأجهزة الكهربائية وأجهزة التكييف والتبريد، جميعها بجودة عالية وأسعار تنافسية.</p>
+                <a href="index.html#contact" class="btn primary-btn large-btn" style="margin-top: 30px;"> اطلب عرض سعر أو استفسر الآن</a>
+            </div>
+        </section>
+
+        <!-- Product Categories Detail -->
+        <section id="product-detail" class="page-section light-bg">
+            <div class="container">
+                <h2>1. المعرض (الأجهزة المنزلية والتجارية)</h2>
+                <p class="section-description">يضم المعرض كافة الأجهزة الحديثة والمبتكرة من الماركات العالمية لضمان أعلى أداء في منزلك أو منشأتك.</p>
+
+                <!-- Grid لعرض جميع المنتجات الـ 19 -->
+                <div class="all-products-grid">
+                    
+                    <!-- مجموعة المكيفات والتبريد -->
+                    <div class="product-group-card animate-on-scroll">
+                        <i class="fas fa-snowflake icon"></i>
+                        <h3>التكييف والتبريد</h3>
+                        <ul>
+                            <li><i class="fas fa-caret-left"></i> مكيفات</li>
+                            <li><i class="fas fa-caret-left"></i> ثلاجات</li>
+                            <li><i class="fas fa-caret-left"></i> فريزرات (مجمدات)</li>
+                            <li><i class="fas fa-caret-left"></i> برادات</li>
+                        </ul>
+                    </div>
+
+                    <!-- مجموعة أجهزة المطبخ -->
+                    <div class="product-group-card animate-on-scroll">
+                        <i class="fas fa-utensils icon"></i>
+                        <h3>أجهزة المطبخ والطهي</h3>
+                        <ul>
+                            <li><i class="fas fa-caret-left"></i> أجهزة صناعة القهوة</li>
+                            <li><i class="fas fa-caret-left"></i> أفران</li>
+                            <li><i class="fas fa-caret-left"></i> ميكروويف</li>
+                            <li><i class="fas fa-caret-left"></i> هيترات طبخ</li>
+                        </ul>
+                    </div>
+
+                    <!-- مجموعة الغسيل والتسخين -->
+                    <div class="product-group-card animate-on-scroll">
+                        <i class="fas fa-bath icon"></i>
+                        <h3>الغسيل والتسخين</h3>
+                        <ul>
+                            <li><i class="fas fa-caret-left"></i> غسالات</li>
+                            <li><i class="fas fa-caret-left"></i> بويلرات</li>
+                            <li><i class="fas fa-caret-left"></i> سخانات فورية</li>
+                            <li><i class="fas fa-caret-left"></i> سخانات بويلر</li>
+                        </ul>
+                    </div>
+
+                    <!-- مجموعة العرض والمراوح -->
+                    <div class="product-group-card animate-on-scroll">
+                        <i class="fas fa-tv icon"></i>
+                        <h3>شاشات ومستلزمات أخرى</h3>
+                        <ul>
+                            <li><i class="fas fa-caret-left"></i> شاشات عرض</li>
+                            <li><i class="fas fa-caret-left"></i> مراوح مختلفة</li>
+                            <li><i class="fas fa-caret-left"></i> مكابس كهربائية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Detail: Industrial Components (تكملة لأجهزة المعرض) -->
+        <section id="industrial-components" class="page-section">
+            <div class="container">
+                <h2>2. قطع غيار ومكونات المشاريع</h2>
+                <p class="section-description">تشمل هذه القائمة الأجزاء والمكونات الأساسية المتوفرة في المخازن، واللازمة لأعمال التركيب والصيانة.</p>
+
+                <div class="components-list-grid">
+                    <div class="component-item animate-on-scroll">
+                        <i class="fas fa-compress icon"></i>
+                        <p>ضواغط (كمبروسرات) مختلفة</p>
+                    </div>
+                    <div class="component-item animate-on-scroll">
+                        <i class="fas fa-bolt icon"></i>
+                        <p>حماية جهد كهربائي</p>
+                    </div>
+                    <div class="component-item animate-on-scroll">
+                        <i class="fas fa-fan icon"></i>
+                        <p>لف موتورات</p>
+                    </div>
+                    <div class="component-item animate-on-scroll">
+                        <i class="fas fa-microchip icon"></i>
+                        <p>صمامات إلكترونية</p>
+                    </div>
+                    <div class="component-item animate-on-scroll">
+                        <i class="fas fa-toolbox icon"></i>
+                        <p>حاصدات مختلفة</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 60px;">
+                    <a href="index.html#contact" class="btn primary-btn large-btn">اطلب منتجك الآن أو استفسر عن الأسعار <i class="fas fa-angle-left"></i></a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Fixed Contact Buttons -->
+        <div class="fixed-contact-buttons">
+            <a href="https://wa.me/201149364431" target="_blank" class="floating-btn whatsapp-btn" aria-label="تواصل واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="tel:+201149364431" class="floating-btn phone-btn" aria-label="اتصال هاتفي">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- العمود 1: معلومات عامة ومتابعة -->
+                <div class="footer-col">
+                    <h3>مؤسسة الإخلاص الحديثة EMAC</h3>
+                    <p>الريادة والشمول في صيانة وتركيب الأجهزة الكهربائية والتكييف والتبريد على نطاق المملكة.</p> 
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <!-- العمود 2: روابط سريعة -->
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="services.html">حجز صيانة</a></li>
+                        <li><a href="#store-content">المتجر الإلكتروني</a></li>
+                        <li><a href="automation.html">الأتمتة</a></li>
+                        <li><a href="#contact-footer">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- العمود 3: اتصل بنا (معلومات الاتصال) -->
+                <div class="footer-col" id="contact-footer">
+                    <h3>اتصل بنا</h3>
+                    <p>الهاتف: <a href="tel:+201149364431">+20 11 49364431</a></p>
+                    <p>الموقع: الأحساء، المملكة العربية السعودية</p> 
+                </div>
+                
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> مؤسسة الإخلاص الحديثة EMAC. جميع الحقوق محفوظة.</p>
+                <p class="footer-note">Design and automation by **GMTWEB**</p> 
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
