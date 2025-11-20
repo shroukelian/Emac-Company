@@ -56,3 +56,36 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /* ملاحظة: تم حذف الكود القديم لـ toggleHeaderBackground من هذه النسخة */
 });
+//main.js (إعادة تفعيل وظيفة التمرير)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navWrapper = document.querySelector('.main-nav-wrapper');
+    const navLinks = document.querySelectorAll('.main-nav-wrapper nav ul li a');
+    const header = document.querySelector('header');
+    const heroSection = document.querySelector('#hero');
+
+    // ... (وظيفة toggleMenu و event listeners سابقة) ...
+
+    // === وظيفة تغيير لون الهيدر عند التمرير (Sticky Header) ===
+    function toggleHeaderBackground() {
+        if (!heroSection || !header) return;
+        
+        // إذا كنا على الصفحة الرئيسية (index.html) فقط نطبق تأثير التمرير
+        if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+            const scrollThreshold = 100; 
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+    }
+
+    // ربط الوظيفة بحدث التمرير
+    window.addEventListener('scroll', toggleHeaderBackground);
+    // تشغيل الوظيفة عند التحميل للتأكد من الحالة الأولية
+    toggleHeaderBackground();
+    
+    // ... (باقي كود الأنميشن وحقوق النشر) ...
+});

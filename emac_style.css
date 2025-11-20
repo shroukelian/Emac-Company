@@ -84,7 +84,7 @@ a:hover {
 
 /* Header & Navigation */
 header {
-    background-color: transparent; 
+    background-color: rgba(255, 255, 255, 0); /* خلفية شفافة */
     color: var(--light-text); 
     padding: 15px 0;
     position: fixed;
@@ -1097,8 +1097,93 @@ background-color: var(--light-text);
     .main-nav-wrapper .contact-header {
         display: block;
     }
-    
-    /* ... (باقي Media Queries) ... */
+    h2 { font-size: 2em; }
+    .workflow-step h3 { font-size: 1.2em; margin-bottom: 5px; } /* تصغير العنوان الفرعي */
+    .workflow-step p { font-size: 0.85em; } /* تصغير النص العادي */
+.workflow-steps-grid {
+        grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+        gap: 15px;
+    }
+    .workflow-step {
+        /* توسيط المحتوى داخل البطاقة */
+        text-align: center;
+        padding: 15px;
+    }
+    .workflow-step .step-number {
+        margin: 0 auto 10px auto; /* إعادة توسيط رقم الخطوة */
+    }
+.features-grid, 
+    .services-grid, 
+    .product-categories-grid, 
+    .automation-features-grid, 
+    .services-list-grid, 
+    .app-showcase-grid,
+    .all-products-grid,      /* <-- تمت الإضافة: شبكة المنتجات الرئيسية */
+    .components-list-grid {  /* <-- تمت الإضافة: شبكة قطع الغيار */
+        grid-template-columns: 1fr !important; /* إجبارها تكون عمود واحد */
+        gap: 20px; /* مسافة بين البطاقات */
+    }
 }
-/* ... (باقي كود CSS سابق) ... */
 
+/* ... (كود CSS سابق) ... */
+
+/* Main Navigation Wrapper - Mobile View */
+@media (max-width: 992px) {
+    /* ... (كود سابق) ... */
+
+    .main-nav-wrapper {
+        /* ... (كود سابق) ... */
+        padding-top: 80px; 
+    }
+
+    nav {
+        width: 100%;
+        padding: 0 20px; /* إضافة بادينج بسيط للـ nav لتوسيط الروابط بشكل غير مباشر */
+        box-sizing: border-box;
+    }
+    
+    nav ul {
+        width: 100%;
+    }
+    
+    nav ul li {
+        width: 100%;
+        margin: 0; /* تأكيد إزالة الهوامش الخارجية */
+    }
+    
+    nav ul li a {
+        padding: 18px 5px; /* تصغير البادينج الأفقي للروابط لتجنب الامتداد */
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    nav ul li a:hover, nav ul li.active a {
+        /* هذا هو السبب الرئيسي للامتداد، يجب أن يتناسب مع عرض الـ li */
+        background-color: var(--primary-darker); 
+    }
+
+    /* ------------------------------------------- */
+    /* تنسيق زر الهاتف (حل مشكلة التوسيط باستخدام Flex) */
+    /* ------------------------------------------- */
+    .contact-header {
+        margin-top: 50px; 
+        padding: 0 20px; 
+        width: 100%;
+        box-sizing: border-box;
+        
+        /* === الحل باستخدام Flexbox === */
+        display: flex;
+        justify-content: center; /* توسيط أفقي */
+        align-items: center;
+    }
+    .contact-header .phone-number {
+        width: 90%; /* عرض أقل قليلاً ليظهر متوسِّطاً داخل المساحة المتاحة */
+        max-width: 300px;
+        text-align: center;
+        padding: 15px 18px;
+        margin: 0; /* إزالة أي هامش قد يعيق التوسيط */
+    }
+    
+    /* ... (باقي كود Media Query 992px) ... */
+}
