@@ -1214,3 +1214,38 @@ background-color: var(--light-text);
     border-radius: 6px;
     background-color: var(--light-bg);
 }
+
+.about-vision-list {
+    list-style: disc;
+    padding: 0 25px; /* إضافة بادينج خفيف لتظهر النقاط بشكل جيد */
+    margin-bottom: 30px; /* مسافة بعد كل قائمة */
+    margin-top: 10px;
+    font-size: 1.05em;
+}
+.about-vision-list li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* ------------------------------------- */
+/* Media Query for Mobile (576px) */
+/* ------------------------------------- */
+@media (max-width: 576px) {
+    /* ... (الكود السابق) ... */
+    
+    /* ضبط التنسيق الجديد على الموبايل */
+    .about-content h3 {
+        font-size: 1.4em !important; /* تصغير حجم العناوين الفرعية أكثر */
+        text-align: right;
+    }
+    
+    .about-vision-list {
+        padding: 0 15px; /* تقليل البادينج على الموبايل للحصول على مساحة أكبر للنص */
+        margin-right: 0;
+    }
+    
+    .about-content p {
+         font-size: 0.95em; /* تصغير خط الفقرات لتوفير مساحة */
+         text-align: justify; /* محاذاة النص على الموبايل */
+    }
+}
