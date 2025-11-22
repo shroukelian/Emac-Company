@@ -75,3 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // تشغيل الوظيفة عند التحميل للتأكد من الحالة الأولية
     toggleHeaderBackground();
 });
+

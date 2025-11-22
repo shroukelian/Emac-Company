@@ -131,53 +131,75 @@
         </section>
 
         <!-- Booking Form Section (Interface for Automation Trigger) -->
-        <section id="booking-form" class="page-section">
-            <div class="container">
-                <h2>برنامج حجز مواعيد الصيانة المؤتمت</h2>
-                <p class="section-description">اختر خدمتك المفضلة، وسيتولى نظامنا المؤتمت ربطك مباشرة بأقرب فني متخصص
-                    وفقاً لجدوله، مع إرسال إشعارات فورية.</p>
+      <!-- services.html -->
+<!-- ... (الكود السابق) ... -->
+<!-- Booking Form Section (Interface for Automation Trigger) -->
+<section id="booking-form" class="page-section">
+    <div class="container">
+        <h2 style="margin-bottom: 20px;">احجز موعد صيانة الآن</h2>
+        <p class="section-description" style="margin-bottom: 50px;">سيتم ربط طلبك فوراً بـ **نظام الإدارة المؤتمت (n8n)** لجدولة فني وإرسال تفاصيل الموعد.</p>
 
-                <div class="contact-form style-center">
-                    <h3>أدخل بياناتك لحجز موعد</h3>
-                    <form action="submit_booking.php" method="POST">
-                        <div class="form-group select-wrapper">
-                            <label for="b-service">الخدمة المطلوبة:</label>
-                            <select id="b-service" name="service" required>
-                                <option value="">--- اختر نوع الخدمة بالتحديد ---</option>
-                                <optgroup label="التكييف المركزي">
-                                    <option value="central_install">تركيب تكييف مركزي</option>
-                                    <option value="pipe_extension">تمديد مواسير النحاس</option>
-                                    <option value="central_maint">صيانة دورية للتكييف المركزي</option>
-                                    <option value="duct_work">صناعة مجاري الهواء "الدكت"</option>
-                                </optgroup>
-                                <optgroup label="الأجهزة المنزلية">
-                                    <option value="ac_maint">صيانة مكيفات سبليت/شباك</option>
-                                    <option value="fridge_repair">صيانة ثلاجات ومجمدات</option>
-                                    <option value="wash_repair">صيانة غسالات</option>
-                                    <option value="oven_repair">صيانة أفران وميكروويف</option>
-                                </optgroup>
-                                <optgroup label="خدمات أخرى">
-                                    <option value="fridge_room_install">تركيب غرف تبريد/تجميد</option>
-                                    <option value="car_ac">صيانة تكييف السيارات المبردة</option>
-                                    <option value="consult">استشارات فنية</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="b-name">الاسم الثلاثي:</label>
-                            <input type="text" id="b-name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="b-phone">رقم الهاتف (لتلقي إشعارات الحجز):</label>
-                            <input type="tel" id="b-phone" name="phone" required>
-                        </div>
-
-                        <button type="submit" class="btn primary-btn large-btn">إرسال طلب الحجز <i
-                                class="fas fa-angle-left"></i></button>
-                    </form>
+        <div class="contact-form style-center detailed-booking-form">
+            <h3>أدخل بياناتك لطلب الخدمة</h3>
+            <form action="submit_booking.php" method="POST">
+                
+                <!-- الاسم -->
+                <div class="form-group">
+                    <label for="b-name">الاسم الثلاثي:</label>
+                    <input type="text" id="b-name" name="name" required placeholder="الاسم الكامل">
                 </div>
-            </div>
-        </section>
+                
+                <!-- رقم الهاتف -->
+                <div class="form-group">
+                    <label for="b-phone">رقم الهاتف (لتلقي إشعارات الحجز):</label>
+                    <input type="tel" id="b-phone" name="phone" required placeholder="مثال: 05xxxxxxxxx">
+                </div>
+                
+                <!-- العنوان (تم إضافته) -->
+                <div class="form-group">
+                    <label for="b-address">العنوان/الموقع بالتفصيل:</label>
+                    <input type="text" id="b-address" name="address" required placeholder="المدينة - الحي - اسم الشارع/العلامة المميزة">
+                </div>
+
+                <!-- نوع الجهاز/المشكلة (مجموعة الاختيار) -->
+                <div class="form-group select-wrapper">
+                    <label for="b-service">نوع الجهاز أو المشكلة:</label>
+                    <select id="b-service" name="service" required>
+                        <option value="">--- اختر نوع الجهاز أو المشكلة بالتحديد ---</option>
+                        <optgroup label="التكييف والتبريد">
+                            <option value="ac_maint">صيانة مكيفات سبليت/شباك</option>
+                            <option value="central_maint">صيانة تكييف مركزي</option>
+                            <option value="pipe_extension">تمديد مواسير نحاس</option>
+                        </optgroup>
+                        <optgroup label="غرف التبريد والأجهزة الثقيلة">
+                            <option value="fridge_room_install">تركيب/صيانة غرف تبريد/تجميد</option>
+                            <option value="car_ac">صيانة تكييف سيارات مبردة</option>
+                        </optgroup>
+                        <optgroup label="الأجهزة المنزلية الأخرى">
+                            <option value="fridge_repair">صيانة ثلاجات ومجمدات</option>
+                            <option value="wash_repair">صيانة غسالات</option>
+                            <option value="oven_repair">صيانة أفران وميكروويف</option>
+                            <option value="other">أخرى (يرجى التوضيح بالوصف)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <!-- وصف إضافي (مهم لـ n8n والتقرير) -->
+                <div class="form-group">
+                    <label for="b-details">وصف مختصر للمشكلة/الخدمة المطلوبة:</label>
+                    <textarea id="b-details" name="details" rows="4" placeholder="يرجى وصف المشكلة بالتفصيل (مثال: المكيف لا يبرد، الثلاجة لا تجمد)"></textarea>
+                </div>
+
+                <button type="submit" class="btn primary-btn large-btn">إرسال طلب الصيانة الآن <i
+                        class="fas fa-angle-left"></i></button>
+            </form>
+            
+<p class="automation-note">
+        * يتم ربط هذا النموذج مباشرة بنظامنا المؤتمت لإصدار تقرير مهمة فني وجدولة الموعد.
+    </p>        </div>
+    </div>
+</section>
+<!-- ... (بقية الكود) ... -->
 
         <section id="coverage" class="page-section light-bg">
             <div class="container">

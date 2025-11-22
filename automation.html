@@ -20,7 +20,7 @@
 
 <body>
 
-       <header style="background-color: #004A99;">
+   <header style="background-color: #004A99;">
         <div class="container">
             <div class="logo">
                 <a href="#hero" class="logo-link">
@@ -43,8 +43,8 @@
                         <li><a href="index.html">الرئيسية</a></li>
                         <li><a href="index.html#about">من نحن</a></li>
                         <li><a href="index.html#features">لماذا EMAC؟</a></li>
-                        <li><a href="services.html">خدماتنا (الصيانة)</a></li>
-                        <li><a href="store.html">المتجر (الإلكتروني)</a></li>
+                        <li><a href="index.html#services.html">خدماتنا (الصيانة)</a></li>
+                        <li><a href="index.html#store">المتجر (الإلكتروني)</a></li>
                         <li><a href="automation.html">نظام n8n للإدارة</a></li>
                         <li><a href="index.html#contact">اتصل بنا</a></li>
                     </ul>
@@ -55,6 +55,7 @@
             </div>
         </div>
     </header>
+
 
     <main>
         <!-- HERO Section for Automation Page -->
@@ -109,20 +110,26 @@
                 <h2>تطبيقات الموبايل (العملاء والفنيين)</h2>
                 
                 <div class="app-showcase-grid">
-                    <div class="app-card animate-on-scroll">
-                        <i class="fas fa-tools icon"></i>
-                        <h3>تطبيق الفنيين (جدول المواعيد)</h3>
-                        <p>تطبيق مخصص للفنيين، يعرض لهم: جدول المواعيد اليومي، تفاصيل الخدمة، موقع العميل، إمكانية تحديث حالة المهمة.</p>
-                        <a href="#" class="btn secondary-btn">شاهد واجهة التطبيق</a>
-                    </div>
                     
+                    <!-- تطبيق العميل (Public) -->
                     <div class="app-card animate-on-scroll">
                         <i class="fas fa-user-alt icon"></i>
                         <h3>تطبيق العميل (الحجز والتتبع)</h3>
-                        <p>تطبيق يتيح للعميل: سهولة حجز موعد الصيانة، تتبع حالة الطلب، مشاهدة موقع الفني على الخريطة، تقديم تقييم الخدمة.</p>
-                        <a href="#" class="btn secondary-btn">شاهد واجهة التطبيق</a>
+                        <p>تطبيق يتيح للعميل: سهولة حجز موعد الصيانة، تتبع حالة الطلب، مشاهدة موقع الفني على الخريطة، تقديم تقييم الخدمة. (متاح للتحميل من متاجر التطبيقات)</p>
+                        <!-- تم تغيير الزر ليصبح بارزاً ويدعو للتحميل -->
+                        <a href="#" class="btn primary-btn" style="margin-top: 20px;">تنزيل تطبيق العميل (Google Play)</a>
+                    </div>
+                    
+                    <!-- تطبيق الفنيين (Internal - Dashboard) -->
+                    <div class="app-card animate-on-scroll">
+                        <i class="fas fa-tools icon"></i>
+                        <h3>تطبيق الفنيين (جدول المواعيد) - داخلي</h3>
+                        <p>تطبيق مخصص لـ **العمليات الداخلية** يعرض للفنيين: جدول المواعيد اليومي، تفاصيل الخدمة، موقع العميل، وإمكانية تحديث حالة المهمة. **(مخصص للفرق الداخلية)**</p>
+                        <!-- تم تغيير الزر ليدل على الدخول الداخلي -->
+                        <a href="#" class="btn secondary-btn" style="margin-top: 20px;">الدخول إلى لوحة إدارة الفنيين</a>
                     </div>
                 </div>
+                <p class="text-center" style="margin-top: 40px; font-weight: 700; color: var(--dark-text);">**ملاحظة: نظام إدارة الفنيين (Dashboard) مخصص لفرق العمل الداخلية ويتم ربطه بحجز العميل أوتوماتيكياً.**</p>
             </div>
         </section>
 

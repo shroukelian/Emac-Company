@@ -1171,3 +1171,46 @@ background-color: var(--light-text);
     
     /* ... (بقية كود 576px) ... */
 }
+
+/* ... (الكود السابق) ... */
+
+/* Detailed Booking Form adjustments */
+.contact-form.detailed-booking-form {
+    max-width: 650px; /* تحديد عرض مناسب للنموذج المفصل */
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form.detailed-booking-form h3 {
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.contact-form.detailed-booking-form textarea {
+    resize: vertical;
+}
+
+/* Media Query for Mobile (576px) */
+@media (max-width: 576px) {
+    /* ... (الكود السابق) ... */
+    
+    .contact-form.detailed-booking-form {
+        padding: 25px 15px; /* تقليل البادينج على الموبايل */
+    }
+}
+
+.automation-note {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #555; /* لون رمادي أو أغمق قليلاً */
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px dashed var(--accent-color); /* إطار متقطع خفيف */
+    border-radius: 6px;
+    background-color: var(--light-bg);
+}
