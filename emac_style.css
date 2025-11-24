@@ -1410,3 +1410,43 @@ background-color: var(--light-text);
         border-width: 3px;
     }
 }
+
+/* emac_style.css (التعديل في تنسيق .about-vision-list li) */
+
+.about-vision-list li {
+    position: relative;
+    /* التعديل 1: زيادة الهامش الأيمن للنص على جميع الشاشات */
+    padding-right: 15px; 
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.05em;
+    display: flex; 
+    /* التأكد من بقاء النص في اليمين والأيقونة في اليسار */
+    align-items: flex-start;
+}
+
+.about-vision-list li i {
+    color: var(--secondary-color); 
+    /* التعديل 2: زيادة الهامش الأيسر قليلاً لإفساح المجال للنص الطويل */
+    margin-left: 15px; 
+    margin-top: 3px; 
+    font-size: 1.1em;
+    flex-shrink: 0; 
+}
+
+/* **تعديل خاص بوضع الموبايل:** */
+@media (max-width: 576px) {
+    /* ... (الكود السابق) ... */
+    
+    .about-vision-list li {
+        font-size: 0.95em; 
+        line-height: 1.5;
+        margin-bottom: 8px;
+        /* التعديل 3: ضبط البادينج على الموبايل ليتناسب مع زيادة الـ margin-left للأيقونة */
+        padding-right: 10px; 
+    }
+    
+    .about-vision-list li i {
+        margin-left: 10px; /* ضبط المسافة على الموبايل أيضاً */
+    }
+}
