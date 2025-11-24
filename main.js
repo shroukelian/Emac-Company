@@ -76,3 +76,168 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleHeaderBackground();
 });
 
+// main.js (إضافة منطق الخطوات المتعددة)
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (الكود السابق) ...
+
+    // *******************************************************
+    // === Multi-Step Form Logic ===
+    // *******************************************************
+    const bookingFormSection = document.getElementById('booking-form');
+    if (bookingFormSection) {
+        const nextStepButtons = document.querySelectorAll('.next-step-btn');
+        const prevStepButtons = document.querySelectorAll('.prev-step-btn');
+        const progressSteps = document.querySelectorAll('.booking-progress-bar .step');
+        const progressBarLine = document.querySelector('.booking-progress-bar .progress-line');
+
+        function goToStep(currentStep, nextStep) {
+            const currentStepElement = document.getElementById(`step-${currentStep}`);
+            const nextStepElement = document.getElementById(`step-${nextStep}`);
+
+            if (currentStepElement && nextStepElement) {
+                // إخفاء الخطوة الحالية وإظهار التالية
+                currentStepElement.style.display = 'none';
+                nextStepElement.style.display = 'block';
+
+                // تحديث شريط التقدم (اللون والمؤشر)
+                progressSteps.forEach(step => step.classList.remove('active'));
+                
+                for (let i = 1; i <= nextStep; i++) {
+                    const stepElement = document.querySelector(`.booking-progress-bar .step[data-step="${i}"]`);
+                    if (stepElement) {
+                        stepElement.classList.add('active');
+                    }
+                }
+                
+                // تحديث شريط التعبئة
+                const percentage = (nextStep - 1) * 33.33; // 25%, 50%, 75%
+                progressBarLine.style.width = `${percentage}%`;
+
+                // التمرير لأعلى الصفحة الجديدة
+                nextStepElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        nextStepButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const currentStep = parseInt(e.target.closest('.booking-step').id.replace('step-', ''));
+                const nextStep = parseInt(e.target.dataset.nextStep);
+                
+                // إضافة التحقق من صحة الحقول (بسيط)
+                if (currentStep === 1) {
+                    const service = document.getElementById('b-service').value;
+                    const location = document.getElementById('b-location').value;
+                    if (!service || !location) {
+                        alert('الرجاء اختيار الخدمة والموقع للمتابعة.');
+                        return;
+                    }
+                }
+
+                goToStep(currentStep, nextStep);
+            });
+        });
+        
+        prevStepButtons.forEach(button => {
+             button.addEventListener('click', (e) => {
+                const currentStep = parseInt(e.target.closest('.booking-step').id.replace('step-', ''));
+                const prevStep = parseInt(e.target.dataset.prevStep);
+                goToStep(currentStep, prevStep);
+            });
+        });
+        
+        // محاكاة إرسال النموذج في الخطوة 3
+        const finalForm = document.getElementById('final-booking-form');
+        if (finalForm) {
+            finalForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                goToStep(3, 4); 
+            });
+        }
+    }
+    
+    // ... (بقية كود main.js) ...
+});
+
+// main.js (إضافة تفاعلية للتقويم واختيار الوقت)
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (الكود السابق) ...
+
+    // *******************************************************
+    // === Multi-Step Form Logic (التكملة) ===
+    // *******************************************************
+    const bookingFormSection = document.getElementById('booking-form');
+    if (bookingFormSection) {
+        // ... (بقية كود الخطوات) ...
+
+        // **********************************************
+        // === Step 2: Calendar and Time Slots Logic ===
+        // **********************************************
+        const calendarDays = document.querySelectorAll('.calendar-grid span');
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const timeSlotTitle = document.querySelector('.time-slots-box h4');
+
+        // 1. تحديد يوم من التقويم
+        calendarDays.forEach(day => {
+            day.addEventListener('click', () => {
+                // إزالة التحديد من جميع الأيام
+                calendarDays.forEach(d => d.classList.remove('selected-day'));
+                // إضافة التحديد لليوم المضغوط
+                day.classList.add('selected-day');
+                
+                // تحديث عنوان الأوقات (محاكاة)
+                const dayNumber = day.textContent.trim();
+                timeSlotTitle.textContent = `الثلاثاء ${dayNumber} نوفمبر (تم التحديد)`;
+
+                // تفعيل الأوقات (محاكاة ظهور الأوقات)
+                timeSlots.forEach(slot => slot.classList.remove('disabled-slot'));
+            });
+        });
+        
+        // 2. تحديد وقت من الأوقات المتاحة
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                // إزالة التحديد من جميع الأوقات
+                timeSlots.forEach(s => s.classList.remove('selected-slot'));
+                // إضافة التحديد للوقت المضغوط
+                slot.classList.add('selected-slot');
+                
+                // تفعيل زر "التالي" هنا (إذا أردت جعل التحديد شرطاً)
+                const nextBtn = document.querySelector('#step-2 .next-step-btn');
+                nextBtn.disabled = false;
+            });
+        });
+
+        // جعل زر "التالي" في الخطوة 2 معطلاً بشكل افتراضي
+        const nextBtnStep2 = document.querySelector('#step-2 .next-step-btn');
+        if (nextBtnStep2) {
+             nextBtnStep2.disabled = true;
+        }
+
+        // إضافة شرط بسيط للتحقق قبل الانتقال إلى الخطوة 3
+        nextStepButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const currentStep = parseInt(e.target.closest('.booking-step').id.replace('step-', ''));
+                const nextStep = parseInt(e.target.dataset.nextStep);
+                
+                // ... (تحقق الخطوة 1 السابق) ...
+
+                // **تحقق الخطوة 2: اختيار الوقت**
+                if (currentStep === 2) {
+                    const selectedDay = document.querySelector('.calendar-grid .selected-day');
+                    const selectedSlot = document.querySelector('.time-slot.selected-slot');
+                    
+                    if (!selectedDay || !selectedSlot) {
+                        alert('الرجاء اختيار اليوم والوقت المناسبين للمتابعة.');
+                        return;
+                    }
+                }
+                
+                goToStep(currentStep, nextStep);
+            });
+        });
+    }
+
+    // ... (بقية كود main.js) ...
+});

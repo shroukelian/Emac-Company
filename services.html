@@ -23,7 +23,7 @@
 
 <body>
 
-        <header style="background-color: #004A99;">
+    <header style="background-color: #004A99;">
         <div class="container">
             <div class="logo">
                 <a href="#hero" class="logo-link">
@@ -76,7 +76,8 @@
         <section id="main-services-list" class="page-section light-bg">
             <div class="container">
                 <h2 class="animate-on-scroll">نطاق خدمات الصيانة والمشاريع</h2>
-                <p class="section-description animate-on-scroll">نقدم خدماتنا بخبرة واحترافية عالية، شاملة للقطاع التجاري والصناعي والمنزلي.</p>
+                <p class="section-description animate-on-scroll">نقدم خدماتنا بخبرة واحترافية عالية، شاملة للقطاع
+                    التجاري والصناعي والمنزلي.</p>
 
                 <div class="services-list-grid">
                     <!-- خدمات تركيب التكييف المركزي -->
@@ -87,7 +88,8 @@
                             <li><i class="fas fa-check-circle"></i> تركيب وصيانة وحدات التكييف المركزي</li>
                             <li><i class="fas fa-check-circle"></i> صناعة مجاري الهواء "الدكت"</li>
                             <li><i class="fas fa-check-circle"></i> صيانة العوازل وحلول التبريد</li>
-                            <li><i class="fas fa-check-circle"></i> <strong style="color: var(--primary-color);">تمديد مواسير النحاس للتكييف</strong></li>
+                            <li><i class="fas fa-check-circle"></i> <strong style="color: var(--primary-color);">تمديد
+                                    مواسير النحاس للتكييف</strong></li>
                         </ul>
                     </div>
 
@@ -102,7 +104,7 @@
                             <li><i class="fas fa-check-circle"></i> خدمات نظام لوحة المراقبة عن بعد</li>
                         </ul>
                     </div>
-                    
+
                     <!-- خدمات صيانة الأجهزة المنزلية -->
                     <div class="service-detail-card animate-on-scroll">
                         <i class="fas fa-home icon"></i>
@@ -115,7 +117,7 @@
                         </ul>
                     </div>
 
-                     <!-- خدمات تخصصية أخرى -->
+                    <!-- خدمات تخصصية أخرى -->
                     <div class="service-detail-card animate-on-scroll">
                         <i class="fas fa-hands-helping icon"></i>
                         <h3>خدمات احترافية إضافية</h3>
@@ -131,75 +133,136 @@
         </section>
 
         <!-- Booking Form Section (Interface for Automation Trigger) -->
-      <!-- services.html -->
-<!-- ... (الكود السابق) ... -->
-<!-- Booking Form Section (Interface for Automation Trigger) -->
-<section id="booking-form" class="page-section">
+        <!-- services.html -->
+        <!-- ... (الكود السابق) ... -->
+        <!-- Booking Form Section (Interface for Automation Trigger) -->
+      <!-- services.html (استبدال قسم #booking-form) -->
+
+<!-- services.html (قسم الحجز #booking-form) -->
+<section id="booking-form" class="page-section light-bg">
     <div class="container">
-        <h2 style="margin-bottom: 20px;">احجز موعد صيانة الآن</h2>
-        <p class="section-description" style="margin-bottom: 50px;">سيتم ربط طلبك فوراً بـ **نظام الإدارة المؤتمت (n8n)** لجدولة فني وإرسال تفاصيل الموعد.</p>
+        <!-- شريط التقدم Multi-Step -->
+        <div class="booking-progress-bar">
+            <div class="step active" data-step="1">1. الخدمة</div>
+            <div class="step" data-step="2">2. الوقت</div>
+            <div class="step" data-step="3">3. التفاصيل</div>
+            <div class="step" data-step="4">4. تم</div>
+            <div class="progress-line" style="width: 0%;"></div>
+        </div>
 
-        <div class="contact-form style-center detailed-booking-form">
-            <h3>أدخل بياناتك لطلب الخدمة</h3>
-            <form action="submit_booking.php" method="POST">
-                
-                <!-- الاسم -->
-                <div class="form-group">
-                    <label for="b-name">الاسم الثلاثي:</label>
-                    <input type="text" id="b-name" name="name" required placeholder="الاسم الكامل">
-                </div>
-                
-                <!-- رقم الهاتف -->
-                <div class="form-group">
-                    <label for="b-phone">رقم الهاتف (لتلقي إشعارات الحجز):</label>
-                    <input type="tel" id="b-phone" name="phone" required placeholder="مثال: 05xxxxxxxxx">
-                </div>
-                
-                <!-- العنوان (تم إضافته) -->
-                <div class="form-group">
-                    <label for="b-address">العنوان/الموقع بالتفصيل:</label>
-                    <input type="text" id="b-address" name="address" required placeholder="المدينة - الحي - اسم الشارع/العلامة المميزة">
-                </div>
-
-                <!-- نوع الجهاز/المشكلة (مجموعة الاختيار) -->
-                <div class="form-group select-wrapper">
-                    <label for="b-service">نوع الجهاز أو المشكلة:</label>
-                    <select id="b-service" name="service" required>
-                        <option value="">--- اختر نوع الجهاز أو المشكلة بالتحديد ---</option>
-                        <optgroup label="التكييف والتبريد">
-                            <option value="ac_maint">صيانة مكيفات سبليت/شباك</option>
-                            <option value="central_maint">صيانة تكييف مركزي</option>
-                            <option value="pipe_extension">تمديد مواسير نحاس</option>
-                        </optgroup>
-                        <optgroup label="غرف التبريد والأجهزة الثقيلة">
-                            <option value="fridge_room_install">تركيب/صيانة غرف تبريد/تجميد</option>
-                            <option value="car_ac">صيانة تكييف سيارات مبردة</option>
-                        </optgroup>
-                        <optgroup label="الأجهزة المنزلية الأخرى">
-                            <option value="fridge_repair">صيانة ثلاجات ومجمدات</option>
-                            <option value="wash_repair">صيانة غسالات</option>
-                            <option value="oven_repair">صيانة أفران وميكروويف</option>
-                            <option value="other">أخرى (يرجى التوضيح بالوصف)</option>
-                        </optgroup>
-                    </select>
-                </div>
-                
-                <!-- وصف إضافي (مهم لـ n8n والتقرير) -->
-                <div class="form-group">
-                    <label for="b-details">وصف مختصر للمشكلة/الخدمة المطلوبة:</label>
-                    <textarea id="b-details" name="details" rows="4" placeholder="يرجى وصف المشكلة بالتفصيل (مثال: المكيف لا يبرد، الثلاجة لا تجمد)"></textarea>
-                </div>
-
-                <button type="submit" class="btn primary-btn large-btn">إرسال طلب الصيانة الآن <i
-                        class="fas fa-angle-left"></i></button>
-            </form>
+        <div class="booking-steps-wrapper">
             
-<p class="automation-note">
-        * يتم ربط هذا النموذج مباشرة بنظامنا المؤتمت لإصدار تقرير مهمة فني وجدولة الموعد.
-    </p>        </div>
+            <!-- الخطوة 1: اختيار الخدمة (Service Selection) -->
+            <div id="step-1" class="booking-step active">
+                <h2 style="margin-top: 40px; margin-bottom: 20px;">الخطوة 1: اختيار الخدمة والموقع</h2>
+                <p class="section-description" style="margin-bottom: 30px;">يرجى اختيار نوع الخدمة وموقعها.</p>
+
+                <div class="contact-form style-center">
+                    <!-- حقل الخدمة (تم التعديل هنا) -->
+                    <div class="form-group select-wrapper">
+                        <label for="b-service">الخدمة المطلوبة:</label>
+                        <select id="b-service" name="service" required>
+                            <option value="" disabled selected>--- اختر نوع الخدمة بالتحديد ---</option> 
+                            
+                            <optgroup label="التكييف والتبريد">
+                                <option value="ac_maint">صيانة مكيفات سبليت/شباك</option>
+                                <option value="central_maint">صيانة تكييف مركزي</option>
+                                <option value="pipe_extension">تمديد مواسير نحاس</option>
+                            </optgroup>
+                            <optgroup label="الأجهزة المنزلية">
+                                <option value="fridge_repair">صيانة ثلاجات ومجمدات</option>
+                                <option value="wash_repair">صيانة غسالات</option>
+                                <option value="oven_repair">صيانة أفران وميكروويف</option>
+                            </optgroup>
+                            <optgroup label="خدمات أخرى">
+                                <option value="fridge_room_install">تركيب/صيانة غرف تبريد/تجميد</option>
+                                <option value="car_ac">صيانة تكييف سيارات مبردة</option>
+                                <option value="other">أخرى</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <!-- حقل الموقع (تم التعديل هنا) -->
+                    <div class="form-group select-wrapper">
+                        <label for="b-location">الموقع:</label>
+                        <select id="b-location" name="location" required>
+                            <option value="" disabled selected>--- اختر موقعاً ---</option>
+                            <option value="hassa">الأحساء</option>
+                            <option value="dammam">الدمام / الخبر</option>
+                            <option value="riyadh">الرياض</option>
+                            <option value="other">مدن أخرى</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="btn primary-btn large-btn next-step-btn" data-next-step="2">التالي <i class="fas fa-angle-left"></i></button>
+                </div>
+            </div>
+
+            <!-- الخطوة 2: اختيار الوقت (Calendar/Time Slot) -->
+            <div id="step-2" class="booking-step" style="display: none;">
+                <h2 style="margin-top: 40px; margin-bottom: 20px;">الخطوة 2: اختيار الوقت المناسب</h2>
+                <p class="section-description" style="margin-bottom: 30px;">اختر اليوم والموعد المناسبين لزيارة الفني.</p>
+                <div class="contact-form style-center calendar-view">
+                    <!-- هنا سنضع محاكاة بسيطة للتقويم وأوقات الحجز -->
+                    <div class="calendar-and-slots-wrapper">
+                        <div class="calendar-box">
+                            <h4>نوفمبر 2025</h4>
+                            <div class="calendar-grid">
+                                <!-- محاكاة أيام التقويم -->
+                                <span>24</span><span>25</span><span class="available">26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                            </div>
+                        </div>
+                        <div class="time-slots-box">
+                            <!-- أوقات الحجز (Time Slots) -->
+                            <h4>الثلاثاء 26 نوفمبر</h4>
+                            <button type="button" class="time-slot active-slot">8:00 ص</button>
+                            <button type="button" class="time-slot">8:30 ص</button>
+                            <button type="button" class="time-slot">9:00 ص</button>
+                            <button type="button" class="time-slot">9:30 ص</button>
+                            <button type="button" class="time-slot">10:00 ص</button>
+                            <button type="button" class="time-slot">10:30 ص</button>
+                            <button type="button" class="time-slot">11:00 ص</button>
+                            <!-- ... (يمكن إضافة المزيد) ... -->
+                        </div>
+                    </div>
+                    <div class="step-navigation-buttons">
+                        <button type="button" class="btn primary-btn large-btn next-step-btn" data-next-step="3" style="margin-left: 15px;">التالي <i class="fas fa-angle-left"></i></button>
+                        <button type="button" class="btn secondary-btn large-btn prev-step-btn" data-prev-step="1">السابق</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الخطوة 3: إدخال التفاصيل (Details) -->
+            <div id="step-3" class="booking-step" style="display: none;">
+                <h2 style="margin-top: 40px; margin-bottom: 20px;">الخطوة 3: إدخال التفاصيل</h2>
+                <p class="section-description" style="margin-bottom: 30px;">أدخل معلومات الاتصال ووصف المشكلة.</p>
+
+                <div class="contact-form style-center">
+                    <form id="final-booking-form">
+                        <div class="form-group"><label for="b-name">الاسم الثلاثي:</label><input type="text" id="b-name" name="name" required placeholder="الاسم الكامل"></div>
+                        <div class="form-group"><label for="b-phone">رقم الهاتف:</label><input type="tel" id="b-phone" name="phone" required placeholder="مثال: 05xxxxxxxx"></div>
+                        <div class="form-group"><label for="b-details">وصف المشكلة:</label><textarea id="b-details" name="details" rows="4" placeholder="يرجى وصف المشكلة بالتفصيل"></textarea></div>
+                    </form>
+                    <div class="step-navigation-buttons">
+                        <button type="submit" form="final-booking-form" class="btn primary-btn large-btn next-step-btn" data-next-step="4" style="margin-left: 15px;">تأكيد الحجز <i class="fas fa-angle-left"></i></button>
+                        <button type="button" class="btn secondary-btn large-btn prev-step-btn" data-prev-step="2">السابق</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخطوة 4: تم (Confirmation) -->
+             <div id="step-4" class="booking-step" style="display: none;">
+                <h2 style="margin-top: 40px; color: var(--secondary-color);">تم تأكيد الحجز بنجاح! <i class="fas fa-check-circle"></i></h2>
+                <p class="section-description" style="margin-bottom: 30px;">
+                    شكراً لك. تم إرسال طلبك بنجاح إلى نظام الإدارة لدينا. ستتلقى رسالة تأكيد تتضمن تفاصيل الموعد واسم الفني قريباً.
+                </p>
+                <a href="index.html" class="btn primary-btn large-btn">العودة للصفحة الرئيسية</a>
+            </div>
+
+        </div>
     </div>
 </section>
-<!-- ... (بقية الكود) ... -->
+        <!-- ... (بقية الكود) ... -->
 
         <section id="coverage" class="page-section light-bg">
             <div class="container">
@@ -217,12 +280,11 @@
             </div>
         </section>
         <!-- Fixed Contact Buttons -->
-        <div class="fixed-contact-buttons">
-            <a href="https://wa.me/201149364431" target="_blank" class="floating-btn whatsapp-btn"
-                aria-label="تواصل واتساب">
+       <div class="fixed-contact-buttons">
+            <a href="https://wa.me/9660566093388" target="_blank" class="floating-btn whatsapp-btn" aria-label="تواصل واتساب">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="tel:+201149364431" class="floating-btn phone-btn" aria-label="اتصال هاتفي">
+            <a href="tel:+9660566093388" class="floating-btn phone-btn" aria-label="اتصال هاتفي">
                 <i class="fas fa-phone-alt"></i>
             </a>
         </div>
@@ -235,10 +297,10 @@
                 <div class="footer-col">
                     <h3>مؤسسة الإخلاص الحديثة EMAC</h3>
                     <p>الريادة والشمول في صيانة وتركيب الأجهزة الكهربائية والتكييف والتبريد على نطاق المملكة.</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <div class="social-links">
+                        <a href="https://www.snapchat.com/add/emac-aw3388" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://www.instagram.com/emac3388/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/17FKKvL4oy/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -258,9 +320,10 @@
             </div>
             <div class="copyright">
                 <p>&copy; <span id="current-year"></span> مؤسسة الإخلاص الحديثة EMAC. جميع الحقوق محفوظة.</p>
-  <p class="footer-note">Design and programming by<a
+                <p class="footer-note">Design and programming by<a
                         href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
-                        target="_blank"><strong>GMTWEB</strong> </a> </p>            </div>
+                        target="_blank"><strong>GMTWEB</strong> </a> </p>
+            </div>
         </div>
     </footer>
     <script src="main.js"></script>
