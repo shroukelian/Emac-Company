@@ -1450,3 +1450,40 @@ background-color: var(--light-text);
         margin-left: 10px; /* ضبط المسافة على الموبايل أيضاً */
     }
 }
+/* emac_style.css (التعديل في Media Query 576px) */
+
+/* ... (الكود السابق) ... */
+
+@media (max-width: 576px) {
+    /* ... (الكود السابق) ... */
+    
+    /* تنسيق خاص لقسم الإعلان عن التطبيق */
+    #app-promo .container {
+        padding: 50px 20px; /* تقليل البادينج العمودي قليلاً وزيادة الأفقي */
+    }
+    
+    #app-promo h2 {
+        font-size: 1.8em; /* تصغير الخط قليلاً */
+        line-height: 1.3;
+    }
+    
+    #app-promo .section-description {
+        font-size: 1em !important;
+        margin-bottom: 20px !important;
+        line-height: 1.5;
+    }
+    
+    .app-download-links {
+        flex-direction: column; /* جعل الأزرار تأتي فوق بعضها البعض */
+        gap: 15px !important;
+    }
+    
+    .app-download-links a {
+        font-size: 1.1em;
+        padding: 15px 25px; /* تثبيت حجم مناسب */
+        width: 100%; /* جعل كل زر يأخذ عرضاً كاملاً */
+        box-sizing: border-box; /* للتأكد من أن البادينج لا يوسع العرض */
+    }
+    
+    /* ... (بقية كود 576px) ... */
+}
