@@ -1,9 +1,9 @@
 /* Color Palette (New: Blue and Muted Gold/Orange) */
 :root {
-    --primary-color: #004A99; /* Blue Dark - للمؤسسة */
-    --secondary-color: #E60026; /* Red - لون الأزرار البارزة (Primary Button) */
-    --accent-color: #CCCCCC; /* Gray - لبعض الحدود والخلفيات الفاتحة */
-    --light-bg: #F8F8F8; /* خلفية فاتحة جداً */
+    --primary-color: #004A99; 
+    --secondary-color: #E60026; 
+    --accent-color: #CCCCCC; 
+    --light-bg: #F8F8F8; 
     --dark-text: #333333;
     --light-text: #ffffff;
     --primary-darker: #003770;
@@ -68,9 +68,6 @@ a:hover {
 }
 .text-center { text-align: center; }
 
-/* ------------------------------------- */
-/* تنسيقات العناصر المخفية (Animation Control) */
-/* ------------------------------------- */
 .animate-on-scroll {
     opacity: 0; 
     transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
@@ -84,7 +81,7 @@ a:hover {
 
 /* Header & Navigation */
 header {
-    background-color: transparent; /* خلفية شفافة */
+    background-color: transparent; 
     color: var(--light-text); 
     padding: 15px 0;
     position: fixed;
@@ -136,9 +133,9 @@ header .container {
 nav ul { display: flex; list-style: none; padding: 0; margin: 0; }
 nav ul li a {
 color: var(--light-text); 
-    padding: 12px 10px; /* تم تقليل البادينج الأفقي من 18px إلى 10px */
+    padding: 12px 10px; 
     font-weight: 600;
-    font-size: 0.95em; /* تم تقليل حجم الخط قليلاً */
+    font-size: 0.95em; 
     border-radius: 6px;
     white-space: nowrap;
     transition: all 0.4s ease;
@@ -820,12 +817,12 @@ footer a:hover {
 @media (max-width: 992px) {
     /* Mobile Nav Styles */
     header { 
-        background-color: var(--primary-color) !important; /* إجبار الخلفية الزرقاء في الموبايل */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* إضافة ظل ثابت */
+        background-color: var(--primary-color) !important; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
     }
     nav {
         width: 100%;
-        padding: 0; /* تأكيد إزالة البادينج */
+        padding: 0; 
         box-sizing: border-box;
     }
     .main-nav-wrapper { right: -100%; }
@@ -860,20 +857,19 @@ footer a:hover {
 
 @media (max-width: 576px) {
 header{
-    background-color: var(--primary-color); /* Added to prevent title from overlapping on scroll on index page */
+    background-color: var(--primary-color);
 }
  #hero {
-        min-height: 85vh !important; /* زيادة الارتفاع لضمان اكتمال الصورة */
-        padding: 120px 0 120px 0; /* تم زيادة البادينج العلوي لضمان ظهور الـ h1 */
+        min-height: 85vh !important; 
+        padding: 120px 0 120px 0;
     }
     
-    /* التعديل الرئيسي: تصغير حجم h1 أكثر */
     h1 { 
-        font-size: 2em !important; /* Reduced from 2.2em to 2em */
+        font-size: 2em !important;
         line-height: 1.2;
     }
     
-    /* التأكيد على تنسيق h1 داخل قسم الهيرو لتجنب مشكلات التوريث */
+  
     #hero h1 {
         font-size: 2em !important; 
     }
@@ -892,7 +888,7 @@ header{
     
     .about-image { max-width: 100%; }
     #contact .container {
-        padding: 0 20px; /* زيادة مساحة البادينج لعدم التصاق المحتوى بالحواف */
+        padding: 0 20px; 
     }
     
     .contact-grid {
@@ -901,22 +897,20 @@ header{
     }
     
     .contact-form, .contact-info {
-        width: 100%; /* جعلهم يأخذون العرض الكامل */
+        width: 100%;
         box-sizing: border-box;
-        margin: 0 auto; /* التوسيط */
+        margin: 0 auto; 
     }
     
-    /* توسيط محتوى البطاقات داخلياً */
     .contact-info {
-        text-align: center; /* توسيط نصوص معلومات الاتصال */
+        text-align: center; 
     }
     .contact-info h3 {
         text-align: center;
     }
-    /* إزالة المسافة غير المرغوبة من الـ Social Links */
     .social-links-contact {
         display: flex;
-        justify-content: center; /* توسيط أيقونات السوشيال ميديا */
+        justify-content: center; 
         margin-top: 15px;
         padding-bottom: 5px;
     }
@@ -924,32 +918,27 @@ header{
         margin: 0 8px;
     }
     
-    /* توسيط أسطر معلومات الاتصال (الهاتف، البريد، الموقع) */
     .contact-info p {
         text-align: center;
         justify-content: center;
-        display: flex; /* لتوسيط الأيقونة مع النص */
+        display: flex; 
         align-items: center;
     }
-
-    /* Fixed Buttons Conflict Fix */
-    /* زيادة مسافة البادينج السفلية لإبعاد المحتوى عن الأزرار العائمة */
     #contact {
         padding-bottom: 120px; 
     }
-    .workflow-step h3 { font-size: 1.2em; margin-bottom: 5px; } /* تصغير العنوان الفرعي */
-    .workflow-step p { font-size: 0.85em; } /* تصغير النص العادي */
+    .workflow-step h3 { font-size: 1.2em; margin-bottom: 5px; } 
+    .workflow-step p { font-size: 0.85em; } 
     .workflow-steps-grid {
-        grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+        grid-template-columns: 1fr;
         gap: 15px;
     }
     .workflow-step {
-        /* توسيط المحتوى داخل البطاقة */
         text-align: center;
         padding: 15px;
     }
     .workflow-step .step-number {
-        margin: 0 auto 10px auto; /* إعادة توسيط رقم الخطوة */
+        margin: 0 auto 10px auto; 
     }
     .features-grid, 
     .services-grid, 
@@ -957,19 +946,18 @@ header{
     .automation-features-grid, 
     .services-list-grid, 
     .app-showcase-grid,
-    .all-products-grid,      /* <-- تمت الإضافة: شبكة المنتجات الرئيسية */
-    .components-list-grid {  /* <-- تمت الإضافة: شبكة قطع الغيار */
-        grid-template-columns: 1fr !important; /* إجبارها تكون عمود واحد */
-        gap: 20px; /* مسافة بين البطاقات */
+    .all-products-grid,      
+    .components-list-grid {  
+        grid-template-columns: 1fr !important; 
+        gap: 20px; 
     }
 }
 
 
-/* ... (كود CSS سابق) ... */
 
 /* Hamburger Menu (Standard) */
 .hamburger-menu { 
-    display: none; /* الوضع الافتراضي: مخفية في الديسكتوب */
+    display: none; 
     background: none;
     border: none;
     cursor: pointer;
@@ -990,7 +978,7 @@ background-color: var(--light-text);
 @media (max-width: 992px) {
     .hamburger-menu.open .bar:nth-child(1) {
         transform: translateY(8px) rotate(-45deg);
-        background-color: var(--secondary-color); /* لون أحمر */
+        background-color: var(--secondary-color); 
     }
     .hamburger-menu.open .bar:nth-child(2) {
         opacity: 0;
@@ -1002,53 +990,46 @@ background-color: var(--light-text);
     
     nav {
         width: 100%;
-        padding: 0; /* إلغاء البادينج الخارجي */
+        padding: 0; 
     }
    
     nav ul li {
-        margin: 0; /* إلغاء الهامش */
+        margin: 0;
         width: 100%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     }
     nav ul li a {
         color: var(--light-text);
-        padding: 18px 25px; /* زيادة البادينج لتبدو الروابط كبطاقات */
+        padding: 18px 25px; 
         display: block;
         transition: background-color 0.3s ease;
     }
-    /* تنسيق العنصر النشط أو عند التحويم */
     nav ul li a:hover, nav ul li.active a {
-        background-color: var(--primary-darker); /* خلفية أزرق أغمق عند التحويم/التفعيل */
+        background-color: var(--primary-darker); 
         transform: none;
     }
-    /* إزالة الخلفية من الرابط النشط لتوحيد الشكل */
     nav ul li.active a {
         background-color: var(--primary-darker);
     }
     
-    /* تنسيق رقم الهاتف في القائمة المنسدلة */
     .contact-header {
-        margin-top: 50px; /* زيادة المسافة من الأعلى */
+        margin-top: 50px;
         padding: 0 25px;
     }
     header .container {
         padding: 5px 25px;
-        /* استخدام مسافة بين العناصر وتوسيطهم عمودياً */
         justify-content: space-between; 
     }
     
-    /* تصغير حجم خط اسم المؤسسة في الموبايل */
     .logo-content span {
-        font-size: 1.2em; /* تصغير حجم الخط ليناسب الشاشة ويترك مساحة للهامبرغر */
+        font-size: 1.2em; 
     }
     
-    /* وضع الهامبرغر في أقصى اليسار */
     .hamburger-menu {
-        margin-right: auto; /* دفع الهامبرغر أقصى اليسار */
+        margin-right: auto;
         display: block; 
     }
     
-    /* إخفاء وتنسيق القائمة في وضع الموبايل */
     .main-nav-wrapper {
         position: fixed;
         top: 0;
@@ -1056,7 +1037,7 @@ background-color: var(--light-text);
         width: 75%;
         max-width: 350px;
         height: 100vh;
-        background-color: var(--primary-color); /* خلفية القائمة زرقاء داكنة */
+        background-color: var(--primary-color); 
         box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
         transition: right 0.3s ease-in-out; 
         z-index: 1001;
@@ -1067,9 +1048,8 @@ background-color: var(--light-text);
         padding-top: 80px;
     }
     
-    /* عند إضافة كلاس 'open' بواسطة JavaScript */
     .main-nav-wrapper.open {
-        right: 0; /* إظهار القائمة على الشاشة */
+        right: 0; 
     }
 
     nav {
@@ -1077,14 +1057,14 @@ background-color: var(--light-text);
         padding: 0 20px;
     }
     nav ul {
-        flex-direction: column; /* ترتيب الروابط عمودياً */
+        flex-direction: column;
         text-align: right;
         width: 100%;
     }
     nav ul li {
         width: 100%;
-        margin: 0; /* تأكيد إزالة الهوامش الخارجية */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* فاصل خفيف */
+        margin: 0; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     }
     nav ul li a {
         color: var(--light-text);
@@ -1099,30 +1079,27 @@ background-color: var(--light-text);
         transform: none;
     }
     
-    /* تنسيق زر الهاتف (حل مشكلة التوسيط باستخدام Flex) */
     .contact-header {
         margin-top: 50px; 
         padding: 0 20px; 
         width: 100%;
         box-sizing: border-box;
         
-        /* === الحل باستخدام Flexbox === */
         display: flex;
-        justify-content: center; /* توسيط أفقي */
+        justify-content: center; 
         align-items: center;
     }
     .contact-header .phone-number {
-        width: 90%; /* عرض أقل قليلاً ليظهر متوسِّطاً داخل المساحة المتاحة */
+        width: 90%; 
         max-width: 300px;
         text-align: center;
         padding: 15px 18px;
-        margin: 0; /* إزالة أي هامش قد يعيق التوسيط */
+        margin: 0; 
     }
     
-    /* تنسيق حركة الهامبرغر (التحول إلى X) */
     .hamburger-menu.open .bar:nth-child(1) {
         transform: translateY(8px) rotate(-45deg);
-        background-color: var(--secondary-color); /* لون أحمر */
+        background-color: var(--secondary-color); 
     }
     .hamburger-menu.open .bar:nth-child(2) {
         opacity: 0;
@@ -1132,29 +1109,25 @@ background-color: var(--light-text);
         background-color: var(--secondary-color);
     }
     
-    /* إخفاء رقم الهاتف في الهيدر الرئيسي في وضع الموبايل */
     header .contact-header {
         display: none;
     }
     
-    /* إظهار رقم الهاتف في الموبايل من داخل الـ Wrapper */
     .main-nav-wrapper .contact-header {
         display: block;
     }
     h2 { font-size: 2em; }
-    .workflow-step h3 { font-size: 1.2em; margin-bottom: 5px; } /* تصغير العنوان الفرعي */
-    .workflow-step p { font-size: 0.85em; } /* تصغير النص العادي */
+    .workflow-step h3 { font-size: 1.2em; margin-bottom: 5px; } 
+    .workflow-step p { font-size: 0.85em; }
 }
 
 @media (max-width: 576px) {
-    /* التعديل الجذري على حجم العنوان الرئيسي ليلائم شاشات OPPO/Android الصغيرة */
     h1 { 
-        font-size: 1.8em !important; /* تقليل حجم الخط إلى 1.8em */
+        font-size: 1.8em !important; 
         line-height: 1.2;
     }
     header .container {
         padding: 5px 25px;
-        /* استخدام مسافة بين العناصر وتوسيطهم عمودياً */
         justify-content: space-between; 
     }
     #hero h1 {
@@ -1163,20 +1136,18 @@ background-color: var(--light-text);
     
     h2 { font-size: 2em; margin-bottom: 40px; }   
     
-    /* تعديل حجم الأزرار الكبيرة في قسم الهيرو */
     .large-btn { 
-        padding: 12px 25px; /* تصغير البادينج */
-        font-size: 1.1em; /* تصغير حجم الخط */
+        padding: 12px 25px; 
+        font-size: 1.1em; 
     }
     
-    /* ... (بقية كود 576px) ... */
 }
 
-/* ... (الكود السابق) ... */
+
 
 /* Detailed Booking Form adjustments */
 .contact-form.detailed-booking-form {
-    max-width: 650px; /* تحديد عرض مناسب للنموذج المفصل */
+    max-width: 650px; 
     margin: 0 auto;
     padding: 35px;
     background-color: #ffffff;
@@ -1196,10 +1167,9 @@ background-color: var(--light-text);
 
 /* Media Query for Mobile (576px) */
 @media (max-width: 576px) {
-    /* ... (الكود السابق) ... */
     
     .contact-form.detailed-booking-form {
-        padding: 25px 15px; /* تقليل البادينج على الموبايل */
+        padding: 25px 15px; 
     }
 }
 
@@ -1207,18 +1177,18 @@ background-color: var(--light-text);
     text-align: center;
     font-size: 0.9em;
     font-weight: 500;
-    color: #555; /* لون رمادي أو أغمق قليلاً */
+    color: #555; 
     margin-top: 20px;
     padding: 10px;
-    border: 1px dashed var(--accent-color); /* إطار متقطع خفيف */
+    border: 1px dashed var(--accent-color); 
     border-radius: 6px;
     background-color: var(--light-bg);
 }
 
 .about-vision-list {
     list-style: disc;
-    padding: 0 25px; /* إضافة بادينج خفيف لتظهر النقاط بشكل جيد */
-    margin-bottom: 30px; /* مسافة بعد كل قائمة */
+    padding: 0 25px;
+    margin-bottom: 30px; 
     margin-top: 10px;
     font-size: 1.05em;
 }
@@ -1231,29 +1201,24 @@ background-color: var(--light-text);
 /* Media Query for Mobile (576px) */
 /* ------------------------------------- */
 @media (max-width: 576px) {
-    /* ... (الكود السابق) ... */
-    
-    /* ضبط التنسيق الجديد على الموبايل */
+
     .about-content h3 {
-        font-size: 1.4em !important; /* تصغير حجم العناوين الفرعية أكثر */
+        font-size: 1.4em !important; 
         text-align: right;
     }
     
     .about-vision-list {
-        padding: 0 15px; /* تقليل البادينج على الموبايل للحصول على مساحة أكبر للنص */
+        padding: 0 15px; 
         margin-right: 0;
     }
     
     .about-content p {
-         font-size: 0.95em; /* تصغير خط الفقرات لتوفير مساحة */
-         text-align: justify; /* محاذاة النص على الموبايل */
+         font-size: 0.95em; 
+         text-align: justify; 
     }
 }
 
-/* emac_style.css (إضافة تنسيقات جديدة) */
 
-/* Progress Bar (موجود بالفعل، تم التأكيد على تنسيقه) */
-/* .booking-progress-bar و .step ... الخ */
 
 /* Step 2 - Calendar View (محاكاة) */
 .calendar-view .calendar-and-slots-wrapper {
@@ -1318,7 +1283,6 @@ background-color: var(--light-text);
     margin: 0 5px;
 }
 
-/* emac_style.css (تنسيق اختيار اليوم والوقت) */
 .calendar-grid span.selected-day, .calendar-grid span:hover {
     background-color: var(--primary-color) !important;
     color: var(--light-text);
@@ -1336,7 +1300,6 @@ background-color: var(--light-text);
     }
 }
 
-/* emac_style.css (إضافة تنسيقات شريط التقدم) */
 
 /* Progress Bar Style */
 .booking-progress-bar {
@@ -1346,7 +1309,7 @@ background-color: var(--light-text);
     position: relative;
     max-width: 800px;
     margin: 0 auto 50px auto;
-    background: #e0e0e0; /* خلفية الخط الرمادية */
+    background: #e0e0e0; 
     height: 8px;
     border-radius: 4px;
 }
@@ -1383,7 +1346,6 @@ background-color: var(--light-text);
     background: var(--primary-color);
     border-color: var(--primary-color);
 }
-/* Progress line fill */
 .progress-line {
     height: 100%;
     background-color: var(--primary-color);
@@ -1411,59 +1373,49 @@ background-color: var(--light-text);
     }
 }
 
-/* emac_style.css (التعديل في تنسيق .about-vision-list li) */
 
 .about-vision-list li {
     position: relative;
-    /* التعديل 1: زيادة الهامش الأيمن للنص على جميع الشاشات */
     padding-right: 15px; 
     margin-bottom: 10px;
     line-height: 1.6;
     font-size: 1.05em;
     display: flex; 
-    /* التأكد من بقاء النص في اليمين والأيقونة في اليسار */
     align-items: flex-start;
 }
 
 .about-vision-list li i {
     color: var(--secondary-color); 
-    /* التعديل 2: زيادة الهامش الأيسر قليلاً لإفساح المجال للنص الطويل */
     margin-left: 15px; 
     margin-top: 3px; 
     font-size: 1.1em;
     flex-shrink: 0; 
 }
 
-/* **تعديل خاص بوضع الموبايل:** */
+
 @media (max-width: 576px) {
-    /* ... (الكود السابق) ... */
     
     .about-vision-list li {
         font-size: 0.95em; 
         line-height: 1.5;
         margin-bottom: 8px;
-        /* التعديل 3: ضبط البادينج على الموبايل ليتناسب مع زيادة الـ margin-left للأيقونة */
         padding-right: 10px; 
     }
     
     .about-vision-list li i {
-        margin-left: 10px; /* ضبط المسافة على الموبايل أيضاً */
+        margin-left: 10px; 
     }
 }
-/* emac_style.css (التعديل في Media Query 576px) */
 
-/* ... (الكود السابق) ... */
 
 @media (max-width: 576px) {
-    /* ... (الكود السابق) ... */
     
-    /* تنسيق خاص لقسم الإعلان عن التطبيق */
     #app-promo .container {
-        padding: 50px 20px; /* تقليل البادينج العمودي قليلاً وزيادة الأفقي */
+        padding: 50px 20px; 
     }
     
     #app-promo h2 {
-        font-size: 1.8em; /* تصغير الخط قليلاً */
+        font-size: 1.8em; 
         line-height: 1.3;
     }
     
@@ -1474,16 +1426,15 @@ background-color: var(--light-text);
     }
     
     .app-download-links {
-        flex-direction: column; /* جعل الأزرار تأتي فوق بعضها البعض */
+        flex-direction: column; 
         gap: 15px !important;
     }
     
     .app-download-links a {
         font-size: 1.1em;
-        padding: 15px 25px; /* تثبيت حجم مناسب */
-        width: 100%; /* جعل كل زر يأخذ عرضاً كاملاً */
-        box-sizing: border-box; /* للتأكد من أن البادينج لا يوسع العرض */
+        padding: 15px 25px; 
+        width: 100%; 
+        box-sizing: border-box; 
     }
     
-    /* ... (بقية كود 576px) ... */
 }
